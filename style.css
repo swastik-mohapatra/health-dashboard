@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Mukta&family=Noto+Sans&family=Source+Sans+Pro&display=swap");
+
+.sidebar-part {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.font02 {
+  font-family: "Mukta", sans-serif;
+}
+
+.font03 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nav-pills .nav-item .active {
+  background-color: white;
+}
+
+.navbar-nav .nav-item .active {
+  color: green;
+}
+
+/* line graph begins */
+
+.wrapper {
+  display: block;
+  
+  width: 400px;
+  height: 290px;
+  position: relative;
+}
+
+.label {
+  height: 1em;
+  padding: 0.3em;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  display: none;
+  color: rgb(51, 51, 51);
+}
+
+/* line graph ends */
+
+/* ring graph begins */
+
+#container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 270px;
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+/* ring graph ends */
+
+/* progress bar begins */
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .stepper-wrapper {
+    overflow-x: scroll;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 8px solid #ccc;
+  width: 100%;
+  top: 40px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 8px solid #ccc;
+  width: 100%;
+  top: 40px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  background: white;
+  border: 2px solid green;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: white;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 8px solid #4bb543;
+  width: 100%;
+  top: 40px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+/* progress bar ends */
+
+.only-input {
+  border-radius: 10px;
+}

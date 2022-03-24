@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid fill">
+      <div class="row">
+        <div class="col-md-2 bg-light sidebar-part">
+          <img src="images/enigma.png" alt="" width="200" height="167" />
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active text-success font-weight-bold" href="#"
+                ><i class="far fa-th-large"></i> Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary font-weight-bold" href="#"
+                ><i class="far fa-user mr-1"></i>Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary font-weight-bold" href="#"
+                ><i class="far fa-briefcase mr-1"></i>Orders</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary font-weight-bold" href="#"
+                ><i class="far fa-users mr-1"></i>Referrals</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary font-weight-bold" href="#"
+                ><i class="far fa-file-alt mr-1"></i>Resources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary font-weight-bold" href="#"
+                ><i class="fad fa-search mr-1"></i>Research</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-10">
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sidebar-part"
+          >
+            <!-- Hidden Mobile Toggle Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav main container -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link font-weight-bold text-success" href="#"
+                    >Home<span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="#"
+                    >Medical Report</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="#">Ancestry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="#">Traits</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="#"
+                    >Hi,Ilias <i class="far fa-angle-down ml-1"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- END OF NAVBAR -->
+
+          <div class="row mt-2">
+            <div class="col-md-8 font02">
+              <h2 class="font-weight-bold">Overview</h2>
+              <div class="row container">
+                <div class="col-md-6 shadow-sm container rounded container">
+                  <h4>Test reports</h4>
+                  <div class="wrapper">
+                    <canvas id="c"></canvas>
+                    <div class="label">text</div>
+                  </div>
+                  <!-- <p>Please mouse over the dots</p> -->
+                </div>
+
+                <div class="col-md-5 offset-md-1 shadow-sm rounded container">
+                  <h4>Patients</h4>
+                  <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description"></p>
+                  </figure>
+                </div>
+              </div>
+              <div class="row container mt-3">
+                <div class="col-md-6 shadow-sm container rounded">
+                  <h4>Genetic Conditions</h4>
+                  <canvas
+                    id="myChart"
+                    style="width: 100%; max-width: 300px; height: 200px"
+                  ></canvas>
+                </div>
+                <div class="col-md-5 offset-md-1 shadow-sm rounded container">
+                  <h4>Total reports</h4>
+                  <canvas
+                    id="mChart"
+                    style="width: 100%; max-width: 360px; height: 200px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 offset-md-1 font03">
+              <h2 class="font-weight-bold">Patient info</h2>
+              <div class="card shadow-sm container bg-light">
+                <img src="images/male.png" width="100" height="100" alt="" />
+                <h6><strong>Cameron Williamson</strong></h6>
+                <br />
+                <p class="text-left">Age : 23 years</p>
+                <p class="text-left">Gender : Male</p>
+                <p class="text-left">Address : Saudi Arabia</p>
+                <hr />
+                <h6 class="font-weight-bold">Quick Links</h6>
+                <br />
+                <a class="text-left text-dark"
+                  ><img
+                    src="images/monitor.png"
+                    width="30"
+                    height="30"
+                    alt=""
+                    class="mr-1"
+                  /><b>Medical Reports</b></a
+                >
+                <a class="text-left text-dark"
+                  ><img
+                    src="images/dna.png"
+                    width="30"
+                    height="30"
+                    alt=""
+                    class="mr-1 mt-1"
+                  /><b>Ancestry</b></a
+                >
+                <a class="text-left text-dark"
+                  ><img
+                    src="images/cardiogram.png"
+                    width="30"
+                    height="30"
+                    alt=""
+                    class="mr-1 mt-1 mb-1"
+                  /><b>Traits</b></a
+                >
+                <br />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-3 font02">
+            <h4 class="font-weight-bold">Your reports(Pre Processing)</h4>
+            <div class="stepper-wrapper">
+              <div class="stepper-item completed">
+                <div class="step-counter">
+                  <h2>1</h2>
+                  <p><b>Order a kit</b></p>
+                </div>
+              </div>
+              <div class="stepper-item completed">
+                <div class="step-counter">
+                  <h2>2</h2>
+                  <p><b>Kit Shipment</b></p>
+                </div>
+              </div>
+              <div class="stepper-item active">
+                <div class="step-counter">
+                  <h2>3</h2>
+                  <p><b>Sample Collection</b></p>
+                </div>
+              </div>
+              <div class="stepper-item">
+                <div class="step-counter">
+                  <h2>4</h2>
+                  <p><b>Process Sample</b></p>
+                </div>
+              </div>
+              <div class="stepper-item">
+                <div class="step-counter bg-warning text-white">
+                  <h2>5</h2>
+                  <p><b>Generate Report</b></p>
+                </div>
+                <!-- <div class="step-name">Forth</div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-3 font02">
+            <h4 class="font-weight-bold">Your Next Report</h4>
+            <div class="row container">
+              <div class="col-sm-2 shadow rounded text-center">
+                <img src="images/alarm.png" height="100" width="120" alt="" />
+                <h6>Wake-up Time</h6>
+              </div>
+              <div class="col-sm-2 offset-sm-1 shadow rounded text-center">
+                <img src="images/food.png" height="100" width="120" alt="" />
+                <h6>Cilamtro Aversion</h6>
+              </div>
+              <div class="col-sm-2 offset-sm-1 shadow rounded text-center">
+                <img src="images/bitter.png" height="100" width="120" alt="" />
+                <h6>Bitter Taste</h6>
+              </div>
+              <div class="col-sm-2 offset-sm-1 shadow rounded text-center">
+                <img src="images/fat.png" height="100" width="120" alt="" />
+                <h6>Fat and Weight</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-3 font02">
+            <h4 class="font-weight-bold">Questionnare</h4>
+            <div class="card p-2 mb-4 bg-light shadow-sm rounded">
+              <p class="text-left">
+                <b
+                  >This is a card. What type of pointing device are you
+                  currently using?</b
+                >
+              </p>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label" for="exampleRadios1">
+                  Touch Screen
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="exampleRadios2">
+                  Touchpad
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="exampleRadios3">
+                  Mouse
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="exampleRadios3">
+                  Other, specify
+                </label>
+              </div>
+              <input type="text" class="only-input mt-2" />
+              <div class="row mt-2 container">
+                <div class="col-2">
+                  <button type="button" class="btn btn-warning rounded-pill">
+                    <b>Save to Next</b>
+                  </button>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-2 offset-1 offset-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-light text-secondary rounded-pill"
+                  >
+                    <b>Skip Question</b>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
